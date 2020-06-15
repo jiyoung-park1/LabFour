@@ -1,0 +1,27 @@
+Number.toString method can be used for solving this task. 
+I tried using parseInt method but it was not appropriate. 
+the parseInt() function parses a string argument and returns and integer fo the specified radix. 
+so, I used Number.toString function. 
+for Number objects, the toString() method returns a string representation of the object in the specified radix. 
+
+Number.toString() example)
+function hexcolor(c){
+    if(c < 256){
+        return Math.abs(c).toString(16);
+    }
+    return 0;
+}
+console.log(hexcolor(233)); //expected output: e9
+
+Number.parseInt() example)
+function roughScale(x, base){
+    const parsed = parseInt(x, base);
+    if(isNaN(parsed)) return 0;
+    return parsed * 100
+}
+console.log(roughScale('321', 2)); // expected output: 0
+
+
+reference
+Number.prototype.toString(), retrieved from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
+Number.parseInt(), retrieved from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt
